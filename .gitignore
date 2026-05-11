@@ -1,0 +1,62 @@
+# ============================================================
+# KEEP (永久保存) — 這些才需要 git 追蹤:
+#   content/          — 所有文章 (.md)
+#   static/images/    — 文章圖片 & 網站素材
+#   assets/           — 自訂 CSS/JS override
+#   layouts/          — 自訂 partial / shortcode
+#   data/             — 靜態資料 (JSON/YAML/TOML)
+#   i18n/             — 多語系字串覆寫
+#   hugo.yaml         — 站點設定
+#   .gitmodules       — submodule 指標
+# ============================================================
+
+# ── Hugo build output ────────────────────────────────────────
+public/
+resources/_gen/
+
+# ── Hugo cache (可重建) ──────────────────────────────────────
+.hugo_build.lock
+.cache/
+
+# ── TMP / 暫存區 (本規則：所有暫存寫 ./TMP/) ──────────────────
+TMP/
+
+# ── Node / npm (若使用 PostCSS / Tailwind 等) ─────────────────
+node_modules/
+package-lock.json
+yarn.lock
+.pnp/
+.pnp.js
+
+# ── OS 垃圾 ──────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Editor / IDE ─────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── Python / 自動化腳本產物 ────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+dist/
+build/
+*.egg-info/
+
+# ── 主題本體 (透過 git submodule 管理，不需追蹤內容) ────────────
+# themes/ 目錄本身已被 .gitmodules 指向 submodule，
+# git 只記錄 commit hash，不需也不應 ignore。
+# 若你日後改成手動複製主題才加這行：
+# themes/
+
+# ── 機密 / 環境變數 ──────────────────────────────────────────
+.env
+.env.*
+secrets.*
